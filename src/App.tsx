@@ -16,7 +16,7 @@ import {
 } from "@solana/wallet-adapter-react";
 import { WalletModalProvider } from "@solana/wallet-adapter-react-ui";
 import { useMemo } from "react";
-import Test from "./test";
+import Listener from "./listener";
 import "./App.css";
 
 // import the styles
@@ -47,7 +47,7 @@ function App() {
       <WalletProvider wallets={wallets} autoConnect={true}>
         <WalletModalProvider>
           <div className="App">
-            <Test />
+            <Listener />
           </div>
         </WalletModalProvider>
       </WalletProvider>

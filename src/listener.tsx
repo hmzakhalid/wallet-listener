@@ -8,7 +8,7 @@ import {
   LAMPORTS_PER_SOL,
 } from "@solana/web3.js";
 
-export default function Test() {
+export default function Listener() {
   const [balance, setBalance] = useState(0);
   const [addressToSend, setAddressToSend] = useState("");
   const [addressToListen, setAddressToListen] = useState("");
@@ -47,7 +47,7 @@ export default function Test() {
   const ADDRESS = "api.devnet.solana.com";
 
   useEffect(() => {
-    const ws = new WebSocket(`ws://${ADDRESS}`);
+    const ws = new WebSocket(`wss://${ADDRESS}`);
 
     ws.onopen = () => {
       ws.send(
